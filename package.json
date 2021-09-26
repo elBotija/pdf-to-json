@@ -1,18 +1,22 @@
 {
-  "name": "node-hello-world-minimal",
+  "name": "pdf-to-json",
   "version": "1.0.0",
-  "description": "Node.js minimal example",
-  "author": "Steve Martinelli <s.martinelli@gmail.com>",
+  "description": "Node.js pdf-to-json",
+  "author": "Steve Martinelli <mauroenpixels@gmail.com>",
   "main": "app.js",
   "license": "Apache-2.0",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/IBM/node-hello-world-minimal.git"
+    "type": "git",
+    "url": "https://github.com/elBotija/pdf-to-json.git"
   },
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "pdf.js-extract": "^0.1.5",
+    "temp-write": "^5.0.0",
+    "tmp": "^0.2.1"
   }
 }

@@ -1,7 +1,7 @@
 ---
 applications:
 - path: .
-  name: node-hello-world-example
+  name: pdf-to-json
   buildpack: nodejs_buildpack
   memory: 256M
   instances: 1

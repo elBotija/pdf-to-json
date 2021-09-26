@@ -12,8 +12,8 @@ npm start
 ## Run in a container
 
 ```bash
-docker build -t node-hello-world:latest .
-docker run -it -p 8080:8080 --name node-hello-world node-hello-world:latest
+docker build -t pdf-to-json:latest .
+docker run -it -p 8080:8080 --name pdf-to-json pdf-to-json:latest
 ```
 
 ## Run on Cloud Foudry
@@ -39,15 +39,15 @@ Ensure the container image URL is updated in [deployment.yaml](config/deployment
 
 # build and push to ICR
 # update the container registry to match your own namespace
-docker build -t us.icr.io/samples/node-hello-world:v1 .
-docker push us.icr.io/samples/node-hello-world:v1
+docker build -t us.icr.io/samples/pdf-to-json:v1 .
+docker push us.icr.io/samples/pdf-to-json:v1
 
 # deploy to IKS
 # update the cluster id field to match your IKS instance
 ibmcloud ks cluster config --cluster <cluster-id>
 kubectl config current-context
 kubectl apply -f config/
-kubectl rollout status deployment/node-hello-world
+kubectl rollout status deployment/pdf-to-json
 kubectl get services -o wide
 ```
 
@@ -56,7 +56,7 @@ kubectl get services -o wide
 ```bash
 oc login
 oc new-project samples
-oc new-app nodejs~https://github.com/ibm/node-hello-world.git
-oc expose svc/node-hello-world
+oc new-app nodejs~https://github.com/elBotija/pdf-to-json.git
+oc expose svc/pdf-to-json
 oc get routes
 ```

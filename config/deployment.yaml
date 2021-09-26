@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: node-hello-world
-  name: node-hello-world
+    app: pdf-to-json
+  name: pdf-to-json
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: node-hello-world
+      app: pdf-to-json
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: node-hello-world
+        app: pdf-to-json
     spec:
       containers:
-      - image: us.icr.io/samples/node-hello-world:v1
-        name: node-hello-world
+      - image: us.icr.io/samples/pdf-to-json:v1
+        name: pdf-to-json
         resources: {}
 status: {}
